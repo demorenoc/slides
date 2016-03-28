@@ -4,18 +4,35 @@ author: "Daniel Moreno - Estadístico"
 ---
 
 ```{r setup, echo = FALSE, include = FALSE}
+# I/O
 library("jsonlite")
+library("readr")
+
+# Goodies
 library("magrittr")
 library("dplyr")
 library("tidyr")
+
+# Viz
+library("grid")
+library("lattice")
+library("ggplot2")
 library("wordcloud")
+library("gpairs")
+library("corrplot")
+library("gplots")
+library("coefplot")
+library("cluster")
 
 knitr::opts_chunk$set(message    = FALSE,
                       warning    = FALSE,
                       echo       = FALSE,
                       comment    = "#>",
                       fig.path   = "img/",
-                      cache.path = "cache/")
+                      cache.path = "cache/",
+                      global.par = TRUE)
+
+par(bg = "transparent")
 ```
 
 ## De que vamos a hablar:
@@ -24,7 +41,7 @@ knitr::opts_chunk$set(message    = FALSE,
 
 1. Analísis de datos y mercadeo
 
-1. (Algunos) metodos de analísis de datos para mercadeo
+1. (Algunos) metodos de analísis de datos (para mercadeo)
 
 1. Recursos y referencias
 
@@ -37,11 +54,22 @@ knitr::opts_chunk$set(message    = FALSE,
 ```{r part-c, child = "content/part-c.rmd"}
 ```
 
+# Recursos y referencias
+
+## Recursos y referencias
+
+[1] "R for marketing reasearch and analytics" por [Chris Chapman](http://research.google.com/pubs/ChrisChapman.html) (Google y _AMA Insights Council_) y [Elea McDonnell Feit
+](http://www.lebow.drexel.edu/people/eleafeit) (Drexel University, antes con _The Wharton School, University of Pennsylvania_ y la [_Customer Analytics Initiative_](http://wcai.wharton.upenn.edu/about-us/))
+
+[2] El sitio de la AMA: https://www.ama.org
+
+[3] El sitio de Bruce G.S. Hardie: http://www.brucehardie.com/ ([_London Business School_](https://www.london.edu/))
+
+[4] El sitio de Eric Bradlow: https://marketing.wharton.upenn.edu/profile/185/research ([_The Wharton School, University of Pennsylvania_](https://marketing.wharton.upenn.edu/))
+
 ## Colofón {.smaller .left-margin}
 
-<!-- 
-### [**demorenoc.github.io/slides**](http://demorenoc.github.io/slides)
--->
+### [**demorenoc.github.io/slides/marketing-analytics**](http://demorenoc.github.io/slides/marketing-analytics)
 
 Esta presentación fue escrita en [RMarkdown](http://rmarkdown.rstudio.com/) desde [RStudio](https://www.rstudio.com/) y compilada por `rmarkdown` en la plantilla [`ioslides`](https://code.google.com/archive/p/io-2012-slides/) de Google gracias a [`knitr`](http://yihui.name/knitr/) y [`pandoc`](http://pandoc.org/). Publicada en la web en [GitHub](https://github.com/demorenoc/slides) gracias a [GitHub Pages](https://pages.github.com/).
 

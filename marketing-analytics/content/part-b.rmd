@@ -1,27 +1,27 @@
-# Analisis de datos y mercadeo
+# Análisis de datos y mercadeo
 
-## Retraso historico {.build}
+## Retraso histórico {.build}
 
 Estadística +
 
-Biologia = Biometría
+Biología = Biometría
 
-Economia = Econometría
+Economía = Econometría
 
-Psicologia = Psicometría
+Psicología = Psicometría
 
-Quimica = Quimiometría
+Química = Quimiometría
 
-Ecologia (y ciencias ambientales) = _Environmetrics_
+Ecología (y ciencias ambientales) = _Environmetrics_
 
 ...
 
-Y el mercadeo? Por que no hay "merkometria"?
+¿Y el mercadeo? ¿Por qué no hay "merkometria"?
 
-## Analísis de datos y mercadeo {.build}
+## Análisis de datos y mercadeo {.build}
 
-**¿Como puede ayudar el analísis de datos a hacer "mejor" mercadeo?**
+**¿Comó puede ayudar el análisis de datos a hacer "mejor" mercadeo?**
 
-Mejor: **¿Que problemas de mercadeo hay?**
+Mejor: **¿Cuáles problemas de mercadeo surgen comúnmente?**
 
-
+El rapido avance tecnológico (i.e. internet) ha favorecido el rapido desarrollo de aplicaciones basadas en análisis de datos para el mercadeo, compensando rapidamente esa deuda historica.

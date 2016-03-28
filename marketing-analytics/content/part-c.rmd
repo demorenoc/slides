@@ -1,7 +1,182 @@
-# Metodos de analísis de datos para mercadeo
+# Metodos de análisis de datos para mercadeo
 
-## Analísis basico
+## Análisis básico
 
-Descripción de **distribuciones** de variables: **individual**, **conjunta** y **marginalmente**.
+>- Descripción de **distribuciones** de variables: **marginal**, **conjunta** y **condicionalmente**.
+
+>- Comparación de **grupos** (sub-poblaciones): visual y formalmente. 
+
+>- E.g. entender diferencias en el mercado para dirgirse a grupos de clientes más efeicientemente. 
+
+>- E.g evaluar el **impacto** de campañas de mercadeo o evaluar la efectividad de los canales de adquisición de clientes.
+
+## Análisis básico - distribuciones
+
+```{r distribucion, cache = TRUE}
+store.df <- read_csv("http://goo.gl/QPDdMl")
+
+hist(store.df$p1sales,
+     main = "Product 1 Weekly Sales Frequencies, All Stores",
+     xlab = "Product 1 Sales (Units)",
+     ylab ="Relative frequency",
+     breaks = 30,
+     col = "lightblue",
+     freq = FALSE,
+     xaxt = "n")
+
+axis(side = 1, at = seq(60, 300, by = 20))
+
+lines(density(store.df$p1sales, bw = 10), type = "l", col = "darkred", lwd = 2)
+```
+
+## Análisis básico - comparación de grupos 
+
+```{r boxplots, cache = TRUE}
+boxplot(p2sales ~ p2prom, data = store.df, horizontal = TRUE, yaxt = "n",
+        ylab = "P2 promoted in store?", xlab = "Weekly sales",
+        main = "Weekly sales of P2 with and without promotion")
+
+axis(side = 2, at = c(1, 2), labels = c("No", "Yes"))
+```
+
+## Análisis básico - comparación de grupos
+
+- Comparación de grupos - descripción de variables **condicionalmente**
+
+```{r trellis-hist, cache = TRUE}
+seg.df <- read_csv("http://goo.gl/qw303p") %>%
+  mutate_each(funs(as.factor), gender, ownHome, subscribe, Segment)
+
+histogram(~ subscribe | Segment + ownHome, data = seg.df)
+```
+
+## Análisis básico - comparación de grupos
+
+- [Diagramas de embudo](http://i.stack.imgur.com/t9Y4g.gif) (tasas de conversión) efectividad de canales (!)
+
+!["Funnel" chart](https://solve360.com/help/images/siteTrainingFunnelFinal.png)
+
+## Análisis básico {.build}
 
 _"the most important insights in marketing analysis often come from understanding relationships between variables"_ [1]
+
+>- Relación entre varibles de interés
+>- Análisis de correlación y asociación
+>- Determinantes de variables (factores de interés)
+
+## Análisis básico - correlacíon
+
+```{r corrplot, cache = TRUE, fig.width = 7, fig.height = 5.5}
+cust.df <- read_csv("http://goo.gl/PmPkaG") %>%
+  mutate(email = as.factor(email))
+
+par(bg = "transparent")
+
+corrplot.mixed(corr = cor(select(cust.df, -c(1, 4)), use = "complete.obs"),
+               upper = "ellipse", tl.pos = "lt",
+               col = colorpanel(50, "red", "gray60", "blue4"),
+               bg = "transparent")
+```
+
+## Análisis avanzado - modelamiento
+
+>- ¿Qué hace que mis clientes esten satisfechos? (_"Satisfaction drivers analysis"_)
+
+>- ¿Comó se relacionan precios, campañas de publicidad, etc, con las ventas? (_"Marketing Mix Modeling"_)
+
+>- ¿Cuál es la probabilidad de recompra de mis clientes?
+
+>- ¿Cuanto valor aportan los clientes a la empresa? (_"Customer lifetime value"_)
+
+>- ¿Cuál es la probabilidad de perder un cliente? ¿Qué factores afectan la tasa de retención de los clientes? (_"Churn rate"_)
+
+## Análisis avanzado - modelamiento
+
+- Modelos lineales (regresión lineal)
+
+```{r gpairs, cache = TRUE}
+sat.df <- read.csv("http://goo.gl/HKnl74")
+
+gpairs(sat.df)
+```
+
+## Análisis avanzado - modelamiento
+
+- E.g atribución de pesos (importancia) de variables
+
+```{r model}
+sat.std <- sat.df %>% 
+  mutate(logdist = log(distance),
+         # num.child.factor = factor(num.child),
+         has.child = factor(num.child > 0)) %>%
+  select(-distance) %>%
+  mutate_each(funs(scale), rides:overall)
+
+m7 <- lm(overall ~ rides + games + wait + clean + logdist + has.child +
+                   wait:has.child, data = sat.std)
+
+coefplot(m7, intercept = FALSE, outerCI = 1.96, lwdOuter = 1.5,
+         ylab = "Rating of Feature",
+         xlab = "Association with Overall Satisfaction")
+```
+
+## Análisis avanzado - variables latentes
+
+>- ¿Comó medir o evaluar conceptos subyacentes al comportamiento del consumidor?
+>- E.g. satisfacción, percepción de marca, liderazgo de marca, intención de compra, o lujo (de un producto).
+>- ¿Comó se relaciónan estos componentes entre si?
+
+## Análisis avanzado - variables latentes
+
+```{r brand-corrplot, cache = TRUE}
+brand.ratings <- read.csv("http://goo.gl/IQl8nc")
+
+brand.sc <- brand.ratings %>% 
+  mutate_each(funs(scale), 1:9)
+
+brand.mean <- aggregate(. ~ brand, data = brand.sc, mean) %>%
+  set_rownames(extract2(., "brand")) %>%
+  select(-brand) %>%
+  set_colnames(colnames(brand.sc)[1:9])
+
+par(bg = "transparent")
+
+corrplot(cor(select(brand.sc, 1:9)), order = "hclust")
+```
+
+## Análisis avanzado - variables latentes
+
+- Mapas _perceptuales_
+
+```{r pca, cache = TRUE, fig.height = 5, fig.width = 7}
+brand.pc <- prcomp(brand.sc[, 1:9])
+brand.mu.pc <- prcomp(brand.mean, scale = TRUE)
+
+par(bg = "transparent")
+
+biplot(brand.mu.pc, main = "Brand positioning", cex = c(1.5, 1))
+```
+
+## Análisis avanzado - segmentación
+
+- Problema clásico: encontrar (agrupar), evaluar y/o predecir (clasifcar) grupos de clientes.
+
+```{r cluster, cache = TRUE}
+seg.df <- seg.df %>% select(-7)
+
+seg.df.num <- seg.df %>% 
+  mutate(gender = ifelse(gender == "Male", 0, 1),
+         ownHome = ifelse(ownHome == "ownNo", 0, 1),
+         subscribe = ifelse(subscribe == "subNo", 0, 1))
+
+set.seed(96743)
+seg.k <- kmeans(seg.df.num, centers=4)
+
+par(mfrow = c(1, 2), bg = "transparent")
+
+boxplot(seg.df.num$income ~ seg.k$cluster, ylab = "Income", xlab = "Cluster")
+
+clusplot(seg.df, seg.k$cluster, color = TRUE, shade = TRUE, labels = 4, 
+         lines = 0, main = "K-means cluster plot")
+```
+

@@ -1,6 +1,6 @@
 # Analísis de datos para mercadeo e investigación de mercados
 
-https://demorenoc.github.io/marketing-analytics: una presentación con algunas ideas generales sobre analísis de datos y herramientas estadísticas para apoyar la toma de decisiones en mercadeo y para desarrollar investigación de mercados con un enfoque cuantitativo.
+https://demorenoc.github.io/slides/marketing-analytics: una presentación con algunas ideas generales sobre analísis de datos y herramientas estadísticas para apoyar la toma de decisiones en mercadeo y para desarrollar investigación de mercados con un enfoque cuantitativo.
 
 ## Enlaces y recursos:
 
