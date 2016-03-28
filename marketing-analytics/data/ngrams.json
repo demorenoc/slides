@@ -1,0 +1,110 @@
+[
+  {
+    "ngram": "Data analysis",
+    "type": "NGRAM",
+    "timeseries": [2.4142e-07, 2.4192e-07, 2.5084e-07, 2.6036e-07, 2.6977e-07, 2.6334e-07, 2.6942e-07, 2.7261e-07, 2.7978e-07],
+    "parent": ""
+  },
+  {
+    "ngram": "Descriptive statistics",
+    "type": "NGRAM",
+    "timeseries": [1.5035e-07, 1.5361e-07, 1.6037e-07, 1.7051e-07, 1.8068e-07, 1.8506e-07, 1.9187e-07, 1.9821e-07, 2.061e-07],
+    "parent": ""
+  },
+  {
+    "ngram": "Exploratory data analysis",
+    "type": "NGRAM",
+    "timeseries": [1.7763e-08, 1.7542e-08, 1.7392e-08, 1.6736e-08, 1.6638e-08, 1.562e-08, 1.5628e-08, 1.4367e-08, 1.3793e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "Confirmatory data analysis",
+    "type": "NGRAM",
+    "timeseries": [5.2233e-10, 4.7226e-10, 5.6686e-10, 5.3253e-10, 5.0792e-10, 4.2922e-10, 5.0075e-10, 3.955e-10, 4.2638e-10],
+    "parent": ""
+  },
+  {
+    "ngram": "Predictive analytics",
+    "type": "NGRAM",
+    "timeseries": [0, 1.0356e-10, 1.8527e-10, 4.2542e-10, 8.7897e-10, 1.2074e-09, 1.4086e-09, 1.6903e-09, 1.9835e-09],
+    "parent": ""
+  },
+  {
+    "ngram": "Decision support systems",
+    "type": "NGRAM",
+    "timeseries": [4.2063e-08, 4.0832e-08, 4.0496e-08, 3.9573e-08, 3.835e-08, 3.7223e-08, 3.6158e-08, 3.4499e-08, 3.4148e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "Business intelligence",
+    "type": "NGRAM",
+    "timeseries": [2.1945e-08, 2.3899e-08, 2.4282e-08, 2.6145e-08, 3.0873e-08, 3.22e-08, 3.378e-08, 3.4784e-08, 3.5552e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "Data warehouse",
+    "type": "NGRAM",
+    "timeseries": [4.9053e-08, 4.5015e-08, 4.6828e-08, 4.571e-08, 4.5016e-08, 3.9736e-08, 3.881e-08, 3.726e-08, 3.9358e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "Data mart",
+    "type": "NGRAM",
+    "timeseries": [8.2903e-09, 7.7713e-09, 7.8068e-09, 7.287e-09, 7.4039e-09, 5.7914e-09, 5.3382e-09, 5.275e-09, 5.1698e-09],
+    "parent": ""
+  },
+  {
+    "ngram": "Data mining",
+    "type": "NGRAM",
+    "timeseries": [1.9225e-07, 1.965e-07, 2.0036e-07, 2.0714e-07, 2.1579e-07, 2.1624e-07, 2.213e-07, 2.1846e-07, 2.1969e-07],
+    "parent": ""
+  },
+  {
+    "ngram": "Knowledge discovery",
+    "type": "NGRAM",
+    "timeseries": [2.4395e-08, 2.4565e-08, 2.6145e-08, 2.6427e-08, 2.7741e-08, 2.7954e-08, 2.8724e-08, 2.9848e-08, 3.1e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "Datacube",
+    "type": "NGRAM",
+    "timeseries": [1.8388e-09, 1.6887e-09, 1.569e-09, 1.5315e-09, 1.3594e-09, 1.0593e-09, 9.8291e-10, 9.1541e-10, 8.7226e-10],
+    "parent": ""
+  },
+  {
+    "ngram": "Analytics",
+    "type": "NGRAM",
+    "timeseries": [3.0574e-07, 3.1553e-07, 3.1783e-07, 3.2904e-07, 3.6346e-07, 3.9528e-07, 4.1828e-07, 4.3997e-07, 4.6128e-07],
+    "parent": ""
+  },
+  {
+    "ngram": "Machine learning",
+    "type": "NGRAM",
+    "timeseries": [3.6581e-08, 3.7252e-08, 4.1524e-08, 4.2204e-08, 4.4521e-08, 4.6351e-08, 4.796e-08, 4.9328e-08, 5.1677e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "AI",
+    "type": "NGRAM",
+    "timeseries": [1.2673e-07, 1.2453e-07, 1.2312e-07, 1.1893e-07, 1.1343e-07, 1.0676e-07, 1.0298e-07, 9.9619e-08, 9.5593e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "Neural network",
+    "type": "NGRAM",
+    "timeseries": [1.0582e-07, 1.0489e-07, 1.0485e-07, 1.0357e-07, 1.0196e-07, 9.3253e-08, 9.0165e-08, 9.0202e-08, 8.7462e-08],
+    "parent": ""
+  },
+  {
+    "ngram": "Deep learning",
+    "type": "NGRAM",
+    "timeseries": [4.4826e-09, 4.531e-09, 5.3485e-09, 5.8375e-09, 6.3845e-09, 6.5421e-09, 6.7966e-09, 7.1088e-09, 7.7049e-09],
+    "parent": ""
+  },
+  {
+    "ngram": "Big data",
+    "type": "NGRAM",
+    "timeseries": [6.4311e-10, 6.051e-10, 6.3622e-10, 5.8088e-10, 6.5647e-10, 6.0954e-10, 5.3382e-10, 4.7305e-10, 4.7805e-10],
+    "parent": ""
+  }
+]

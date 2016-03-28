@@ -1,0 +1,105 @@
+# Analísis de datos y el _boom_ de los datos
+
+## El _boom_ de los datos
+
+```{r ngrams-cloud, cache = TRUE}
+par(bg = "transparent")
+
+ngrams <- fromJSON(txt = "../data/ngrams.json") %>%
+  select(ngram, timeseries) %>% 
+  unnest(timeseries) %>% 
+  group_by(ngram) %>%
+  summarise(mean = mean(timeseries)) %>%
+  mutate(ngram = gsub("\\s", "\n", ngram))
+
+ngrams %$% 
+  wordcloud(words  = ngram,
+            freq   = mean,
+            colors = brewer.pal(8, "Dark2"),
+            random.color = TRUE,
+            rot.per = 0.25,
+            random.order = FALSE,
+            use.r.layout =  TRUE)
+```
+
+## El _boom_ de los datos {.build}
+
+<div class="columns-2">
+  Estadística
+  
+  Analísis de datos 
+  
+  (descriptiva, exploratoria, confirmatoria o inferencial, predictiva)
+  
+  _Decision support systems_
+  
+  _Business intelligence_ 
+  
+  _Data mining_
+  
+  _Knowledge discovery_
+  
+  _Data warehouse_
+  
+  _Datamart_
+  
+  _OLAP_
+  
+  _Datacube_
+  
+  _Analytics_ (_predictive_, _prescriptive_)
+  
+  _Machine learning_ 
+  
+  (_Neural networks_, _Deep learning_)
+  
+  _Big data_
+  
+  _Data science_
+</div>
+
+## Analísis de datos - Metas (i)
+
+De wikipidea (en alguna entrada de alguno de los terminos anteriores):
+
+- _"[...] about processes and systems to extract knowledge or insights from data in various forms [...]"_ <!--ds-->
+- _"[...] to extract value from data [...]"_ <!--bd-->
+- _"[...] operate by building a model from example inputs in order to make data-driven predictions or decisions [...]"_ <!--ml-->
+- _"[...] insights from data are used to recommend action or to guide decision making rooted in business context."_  <!--a-->
+- _"[...] discovering patterns in large data sets [...]"_ <!--dm-->
+- _"[...] allow for the easy interpretation of [these] large volumes of data [...]"_ <!--bi-->
+- _"[...] help people make decisions about problems that may be rapidly changing and not easily specified in advance [...]"_ <!--dss-->
+
+## Analísis de datos - Metas (ii)
+
+- _"[...] information assets that require new forms of processing to enable enhanced decision making, insight discovery and process optimization."_ <!--bd-->
+- _"[...] with the goal of discovering useful information, suggesting conclusions, and supporting decision-making."_ <!--da-->
+- _"[...] is the discovery and communication of meaningful patterns in data."_ <!--a-->
+- _"[...] the study and construction of algorithms that can learn from and make predictions on data [...]"_ <!--ml-->
+- _"[...] to extract information from a data set and transform it into an understandable structure for further use."_ <!--dm-->
+- _"[...] a set of techniques and tools for the acquisition and transformation of raw data into meaningful and useful information [...]"_ <!--bi-->
+- _"[...] supports business or organizational decision-making activities [...]"_ <!--dss-->
+
+## Analísis de datos - Metas (iii)
+
+- _"[...] apply [...] to business data to describe, predict, and improve business performance."_ <!--a-->
+- _"[...] to gain valuable knowledge from data [...]"_ <!--a-->
+- _"[...] analysis of large quantities of data to extract previously unknown, interesting patterns such as groups of data records (cluster analysis), unusual records (anomaly detection), and dependencies (association rule mining) [...]"_ <!--dm-->
+-  _"[...] handling large amounts of unstructured data to help identify, develop and otherwise create new strategic ~~business~~ opportunities [...]"_ <!--bi-->
+- _"[...] to support a wide range of business decisions ranging from operational to strategic [...]"_ <!--bi-->
+
+## Analísis de datos {.build}
+
+En resumen:
+
+Todo es una forma de estadística aplicada (o analísis de datos) - los nombres son simplemente cuestion de contexto, algunas diferencias metodologicas y **mercadeo** (comunidades academicas y empresariales detras de los desarrollos) pero los objetivos son los mismos:
+
+- **Información** (conocimiento/entendimiento, _insight_) y
+
+- **Predicción**
+
+Para **tomar decisiones** de manera **inteligente**.
+
+## Analísis de datos - Proceso
+
+![Data and Intellignece](https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Relationship_of_data%2C_information_and_intelligence.png/640px-Relationship_of_data%2C_information_and_intelligence.png)

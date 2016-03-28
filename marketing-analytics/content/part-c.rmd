@@ -1,0 +1,7 @@
+# Metodos de analísis de datos para mercadeo
+
+## Analísis basico
+
+Descripción de **distribuciones** de variables: **individual**, **conjunta** y **marginalmente**.
+
+_"the most important insights in marketing analysis often come from understanding relationships between variables"_ [1]

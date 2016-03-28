@@ -1,0 +1,49 @@
+---
+title: "Introducción al analísis de datos para mercadeo"
+author: "Daniel Moreno - Estadístico"
+---
+
+```{r setup, echo = FALSE, include = FALSE}
+library("jsonlite")
+library("magrittr")
+library("dplyr")
+library("tidyr")
+library("wordcloud")
+
+knitr::opts_chunk$set(message    = FALSE,
+                      warning    = FALSE,
+                      echo       = FALSE,
+                      comment    = "#>",
+                      fig.path   = "img/",
+                      cache.path = "cache/")
+```
+
+## De que vamos a hablar:
+
+1. Analísis de datos y el _boom_ de los datos
+
+1. Analísis de datos y mercadeo
+
+1. (Algunos) metodos de analísis de datos para mercadeo
+
+1. Recursos y referencias
+
+```{r part-a, child = "content/part-a.rmd"}
+```
+
+```{r part-b, child = "content/part-b.rmd"}
+```
+
+```{r part-c, child = "content/part-c.rmd"}
+```
+
+## Colofón {.smaller .left-margin}
+
+<!-- 
+### [**demorenoc.github.io/slides**](http://demorenoc.github.io/slides)
+-->
+
+Esta presentación fue escrita en [RMarkdown](http://rmarkdown.rstudio.com/) desde [RStudio](https://www.rstudio.com/) y compilada por `rmarkdown` en la plantilla [`ioslides`](https://code.google.com/archive/p/io-2012-slides/) de Google gracias a [`knitr`](http://yihui.name/knitr/) y [`pandoc`](http://pandoc.org/). Publicada en la web en [GitHub](https://github.com/demorenoc/slides) gracias a [GitHub Pages](https://pages.github.com/).
+
+La presentación fue preparada por [Daniel Moreno](https://github.com/demorenoc) y el contenido original esta bajo la licensia [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/).
+[![CC BY](http://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/ "WEB")

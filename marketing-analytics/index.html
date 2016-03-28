@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introducción al analísis de datos para mercadeo</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" media="all" href="libs/ioslides-13.5.1/fonts/fonts.css">
+
+  <link rel="stylesheet" media="all" href="libs/ioslides-13.5.1/theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="libs/ioslides-13.5.1/theme/css/phone.css">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Introducción al analísis de datos para mercadeo',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+              },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Daniel Moreno - Estadístico' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+          </hgroup>
+  </slide>
+
+<slide class=''><hgroup><h2>De que vamos a hablar:</h2></hgroup><article  id="de-que-vamos-a-hablar">
+
+<ol>
+<li><p>Analísis de datos y el <em>boom</em> de los datos</p></li>
+<li><p>Analísis de datos y mercadeo</p></li>
+<li><p>(Algunos) metodos de analísis de datos para mercadeo</p></li>
+<li><p>Recursos y referencias</p></li>
+</ol>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Analísis de datos y el <em>boom</em> de los datos</h2></hgroup><article  id="analisis-de-datos-y-el-boom-de-los-datos">
+
+</article></slide><slide class=''><hgroup><h2>El <em>boom</em> de los datos</h2></hgroup><article  id="el-boom-de-los-datos">
+
+<p><img src="img/ngrams-cloud-1.png" title="" alt="" width="720" /></p>
+
+</article></slide><slide class=''><hgroup><h2>El <em>boom</em> de los datos</h2></hgroup><article  id="el-boom-de-los-datos-1" class="build">
+
+<div class="columns-2">
+<p>Estadística</p>
+
+<p>Analísis de datos</p>
+
+<p>(descriptiva, exploratoria, confirmatoria o inferencial, predictiva)</p>
+
+<p><em>Decision support systems</em></p>
+
+<p><em>Business intelligence</em></p>
+
+<p><em>Data mining</em></p>
+
+<p><em>Knowledge discovery</em></p>
+
+<p><em>Data warehouse</em></p>
+
+<p><em>Datamart</em></p>
+
+<p><em>OLAP</em></p>
+
+<p><em>Datacube</em></p>
+
+<p><em>Analytics</em> (<em>predictive</em>, <em>prescriptive</em>)</p>
+
+<p><em>Machine learning</em></p>
+
+<p>(<em>Neural networks</em>, <em>Deep learning</em>)</p>
+
+<p><em>Big data</em></p>
+
+<p><em>Data science</em></p></div>
+
+</article></slide><slide class=''><hgroup><h2>Analísis de datos - Metas (i)</h2></hgroup><article  id="analisis-de-datos---metas-i">
+
+<p>De wikipidea (en alguna entrada de alguno de los terminos anteriores):</p>
+
+<ul>
+<li><em>&quot;[&#8230;] about processes and systems to extract knowledge or insights from data in various forms [&#8230;]&quot;</em> <!--ds--></li>
+<li><em>&quot;[&#8230;] to extract value from data [&#8230;]&quot;</em> <!--bd--></li>
+<li><em>&quot;[&#8230;] operate by building a model from example inputs in order to make data-driven predictions or decisions [&#8230;]&quot;</em> <!--ml--></li>
+<li><em>&quot;[&#8230;] insights from data are used to recommend action or to guide decision making rooted in business context.&quot;</em> <!--a--></li>
+<li><em>&quot;[&#8230;] discovering patterns in large data sets [&#8230;]&quot;</em> <!--dm--></li>
+<li><em>&quot;[&#8230;] allow for the easy interpretation of [these] large volumes of data [&#8230;]&quot;</em> <!--bi--></li>
+<li><em>&quot;[&#8230;] help people make decisions about problems that may be rapidly changing and not easily specified in advance [&#8230;]&quot;</em> <!--dss--></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Analísis de datos - Metas (ii)</h2></hgroup><article  id="analisis-de-datos---metas-ii">
+
+<ul>
+<li><em>&quot;[&#8230;] information assets that require new forms of processing to enable enhanced decision making, insight discovery and process optimization.&quot;</em> <!--bd--></li>
+<li><em>&quot;[&#8230;] with the goal of discovering useful information, suggesting conclusions, and supporting decision-making.&quot;</em> <!--da--></li>
+<li><em>&quot;[&#8230;] is the discovery and communication of meaningful patterns in data.&quot;</em> <!--a--></li>
+<li><em>&quot;[&#8230;] the study and construction of algorithms that can learn from and make predictions on data [&#8230;]&quot;</em> <!--ml--></li>
+<li><em>&quot;[&#8230;] to extract information from a data set and transform it into an understandable structure for further use.&quot;</em> <!--dm--></li>
+<li><em>&quot;[&#8230;] a set of techniques and tools for the acquisition and transformation of raw data into meaningful and useful information [&#8230;]&quot;</em> <!--bi--></li>
+<li><em>&quot;[&#8230;] supports business or organizational decision-making activities [&#8230;]&quot;</em> <!--dss--></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Analísis de datos - Metas (iii)</h2></hgroup><article  id="analisis-de-datos---metas-iii">
+
+<ul>
+<li><em>&quot;[&#8230;] apply [&#8230;] to business data to describe, predict, and improve business performance.&quot;</em> <!--a--></li>
+<li><em>&quot;[&#8230;] to gain valuable knowledge from data [&#8230;]&quot;</em> <!--a--></li>
+<li><em>&quot;[&#8230;] analysis of large quantities of data to extract previously unknown, interesting patterns such as groups of data records (cluster analysis), unusual records (anomaly detection), and dependencies (association rule mining) [&#8230;]&quot;</em> <!--dm--></li>
+<li><em>&quot;[&#8230;] handling large amounts of unstructured data to help identify, develop and otherwise create new strategic <del>business</del> opportunities [&#8230;]&quot;</em> <!--bi--></li>
+<li><em>&quot;[&#8230;] to support a wide range of business decisions ranging from operational to strategic [&#8230;]&quot;</em> <!--bi--></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Analísis de datos</h2></hgroup><article  id="analisis-de-datos" class="build">
+
+<p>En resumen:</p>
+
+<p>Todo es una forma de estadística aplicada (o analísis de datos) - los nombres son simplemente cuestion de contexto, algunas diferencias metodologicas y <strong>mercadeo</strong> (comunidades academicas y empresariales detras de los desarrollos) pero los objetivos son los mismos:</p>
+
+<ul>
+<li><p><strong>Información</strong> (conocimiento/entendimiento, <em>insight</em>) y</p></li>
+<li><p><strong>Predicción</strong></p></li>
+</ul>
+
+<p>Para <strong>tomar decisiones</strong> de manera <strong>inteligente</strong>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Analísis de datos - Proceso</h2></hgroup><article  id="analisis-de-datos---proceso">
+
+<img src='https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Relationship_of_data%2C_information_and_intelligence.png/640px-Relationship_of_data%2C_information_and_intelligence.png' title=''/>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Analisis de datos y mercadeo</h2></hgroup><article  id="analisis-de-datos-y-mercadeo">
+
+</article></slide><slide class=''><hgroup><h2>Retraso historico</h2></hgroup><article  id="retraso-historico" class="build">
+
+<p>Estadística +</p>
+
+<p>Biologia = Biometría</p>
+
+<p>Economia = Econometría</p>
+
+<p>Psicologia = Psicometría</p>
+
+<p>Quimica = Quimiometría</p>
+
+<p>Ecologia (y ciencias ambientales) = <em>Environmetrics</em></p>
+
+<p>&#8230;</p>
+
+<p>Y el mercadeo? Por que no hay &quot;merkometria&quot;?</p>
+
+</article></slide><slide class=''><hgroup><h2>Analísis de datos y mercadeo</h2></hgroup><article  id="analisis-de-datos-y-mercadeo" class="build">
+
+<p><strong>¿Como puede ayudar el analísis de datos a hacer &quot;mejor&quot; mercadeo?</strong></p>
+
+<p>Mejor: <strong>¿Que problemas de mercadeo hay?</strong></p>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Metodos de analísis de datos para mercadeo</h2></hgroup><article  id="metodos-de-analisis-de-datos-para-mercadeo">
+
+</article></slide><slide class=''><hgroup><h2>Analísis basico</h2></hgroup><article  id="analisis-basico">
+
+<p>Descripción de <strong>distribuciones</strong> de variables: <strong>individual</strong>, <strong>conjunta</strong> y <strong>marginalmente</strong>.</p>
+
+<p><em>&quot;the most important insights in marketing analysis often come from understanding relationships between variables&quot;</em> [1]</p>
+
+</article></slide><slide class=''><hgroup><h2>Colofón</h2></hgroup><article  id="colofon" class="smaller left-margin">
+
+<!-- 
+### [**demorenoc.github.io/slides**](http://demorenoc.github.io/slides)
+-->
+
+<p>Esta presentación fue escrita en <a href='http://rmarkdown.rstudio.com/' title=''>RMarkdown</a> desde <a href='https://www.rstudio.com/' title=''>RStudio</a> y compilada por <code>rmarkdown</code> en la plantilla <a href='https://code.google.com/archive/p/io-2012-slides/' title=''><code>ioslides</code></a> de Google gracias a <a href='http://yihui.name/knitr/' title=''><code>knitr</code></a> y <a href='http://pandoc.org/' title=''><code>pandoc</code></a>. Publicada en la web en <a href='https://github.com/demorenoc/slides' title=''>GitHub</a> gracias a <a href='https://pages.github.com/' title=''>GitHub Pages</a>.</p>
+
+<p>La presentación fue preparada por <a href='https://github.com/demorenoc' title=''>Daniel Moreno</a> y el contenido original esta bajo la licensia <a href='http://creativecommons.org/licenses/by/4.0/' title=''>CC-BY 4.0</a>. <a href='http://creativecommons.org/licenses/by/4.0/' title='WEB'><img src='http://i.creativecommons.org/l/by/4.0/88x31.png' title=''/></a></p></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script src="libs/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+<script src="libs/ioslides-13.5.1/js/prettify/prettify.js"></script>
+<script src="libs/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+<script src="libs/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+<script src="libs/ioslides-13.5.1/js/hammer.js"></script>
+<script src="libs/ioslides-13.5.1/js/slide-controller.js"></script>
+<script src="libs/ioslides-13.5.1/js/slide-deck.js"></script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
