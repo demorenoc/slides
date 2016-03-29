@@ -1,5 +1,5 @@
 ---
-title: "Introducción al analísis de datos para mercadeo"
+title: "Introducción al análisis de datos para mercadeo"
 author: "Daniel Moreno - Estadístico"
 ---
 
