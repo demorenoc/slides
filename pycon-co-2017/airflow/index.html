@@ -8510,15 +8510,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box
+/* This file is a compatability layer.  It allows the usage of flexible box 
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this
+`Modern browsers` comments below).  Browsers that are known to implement this 
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+
+    Internet Explorer 11+ 
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11268,7 +11268,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for
+  /* This injects handle bars (a short, wide = symbol) for 
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11703,7 +11703,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-
+    
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11835,7 +11835,7 @@ a.anchor-link {
 <p><br/></p>
 <p><em><a href="https://github.com/demorenoc">Daniel Moreno</a></em></p>
 <p><em>Data Science &amp; Analytics - <a href="https://www.mercadoni.com.co">Mercadoni</a></em></p>
-<p><em>PyCon Colombia (2017-02-10 - 2017-02-11)</em></p>
+<p><em>PyCon Colombia (2017-02-11)</em></p>
 
 </div>
 </div>
@@ -11871,8 +11871,37 @@ I am Daniel.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Outline">Outline<a class="anchor-link" href="#Outline">&#182;</a></h1><ul>
+<li><p>Motivation</p>
+</li>
+<li><p>Whishlist</p>
+</li>
+<li><p>Airflow</p>
+</li>
+<li><p>Airflow - Components</p>
+<ul>
+<li>API and Concepts</li>
+<li>Scheduler</li>
+<li>Web UI</li>
+<li>CLI</li>
+</ul>
+</li>
+<li><p>Airflow - Deployment (brief)</p>
+</li>
+<li><p>Resources and References</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><ul>
-<li>Complex and diverse processes</li>
+<li>Modern companies operate on complex and diverse processes powered by technology and producing diverse and vast amounts of data</li>
 </ul>
 <p><img src="http://www.intorobotics.com/wp-content/uploads/2014/10/HRInternetofThingsStandardsiStockphoto27050372-1393867723706.jpg" alt=""></p>
 
@@ -11885,9 +11914,15 @@ I am Daniel.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><ul>
-<li><em>Continously available</em> and <em>usable</em> data is key for modern companies success
-<img src="http://databasesquad.net/wp-content/uploads/2014/08/data-warehouse-services.jpg" alt=""></li>
+<li><em>Continously available</em> and <em>usable</em> data is key for modern companies success.</li>
+<li>"Clean" data is vital for: <ul>
+<li>Better decision making</li>
+<li>Continuous improvement (Measure-Analyze-Improve)</li>
+<li>Reaserch and Development</li>
 </ul>
+</li>
+</ul>
+<p><img src="http://databasesquad.net/wp-content/uploads/2014/08/data-warehouse-services.jpg" alt=""></p>
 
 </div>
 </div>
@@ -11898,19 +11933,15 @@ I am Daniel.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><ul>
-<li><strong>Moving and transforming data</strong> can get costly</li>
+<li><strong>Moving and transforming data</strong> can get costly, specially when needed continously:<ul>
+<li>Overlooked process in early stages</li>
+<li>Large diversity of tools producing complex and specialized "stacks"</li>
+<li>Cleaning takes around 80% of the time in data analysis</li>
+<li>Task repetition and redundancy</li>
+</ul>
+</li>
 </ul>
 <p><img src="http://vignette3.wikia.nocookie.net/lego/images/6/6c/Janitor.jpg" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Desideratum">Desideratum<a class="anchor-link" href="#Desideratum">&#182;</a></h1><p><img src="https://decisions.com/wp-content/uploads/2015/11/99-c.png" alt=""></p>
 
 </div>
 </div>
@@ -11920,7 +11951,36 @@ I am Daniel.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Desideratum">Desideratum<a class="anchor-link" href="#Desideratum">&#182;</a></h1>
+<h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><h2 id="How-does-your-company-manage-their-data-workflows?">How does your company manage their data <em>workflows</em>?<a class="anchor-link" href="#How-does-your-company-manage-their-data-workflows?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/mercadoni-etl.png" alt=""></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Wishlist">Wishlist<a class="anchor-link" href="#Wishlist">&#182;</a></h1><p><img src="https://decisions.com/wp-content/uploads/2015/11/99-c.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Wishlist">Wishlist<a class="anchor-link" href="#Wishlist">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -11990,7 +12050,7 @@ I am Daniel.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Scaleability</li>
+<li>Scalability</li>
 </ul>
 
 </div>
@@ -12086,7 +12146,18 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Airflow---Main-Components">Airflow - Main Components<a class="anchor-link" href="#Airflow---Main-Components">&#182;</a></h1><ul>
+<h1 id="Airflow---Components">Airflow - Components<a class="anchor-link" href="#Airflow---Components">&#182;</a></h1><p><img src="https://image.slidesharecdn.com/june101115amairbnbbeaucheminv2-150701231554-lva1-app6892/95/airflow-an-open-source-platform-to-author-and-monitor-data-pipelines-23-638.jpg" alt="Airflow-Architecture"></p>
+<p>Image from <a href="http://www.slideshare.net/Hadoop_Summit/airflow-an-open-source-platform-to-author-and-monitor-data-pipelines">Maxime Beauchemin's original presentation in the 2015 Hadoop Summit</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Components">Airflow - Components<a class="anchor-link" href="#Airflow---Components">&#182;</a></h1><ul>
 <li>API (<a href="http://airflow.incubator.apache.org/code.html#api-reference">http://airflow.incubator.apache.org/code.html#api-reference</a>)<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">airflow</span> <span class="kn">import</span> <span class="n">DAG</span>
 <span class="kn">from</span> <span class="nn">airflow.operators</span> <span class="kn">import</span> <span class="n">SimpleHttpOperator</span><span class="p">,</span> <span class="n">MySqlOperator</span>
 </pre></div>
@@ -12096,6 +12167,23 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 </div>
 </div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Executor ("backend" system)<ul>
+<li>Sequential</li>
+<li>Local</li>
+<li>Celery (and Mesos)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12137,40 +12225,13 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Executor ("backend" system)<ul>
-<li>Sequential</li>
-<li>Local</li>
-<li>Celery (and Mesos)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Airflow---Architecture">Airflow - Architecture<a class="anchor-link" href="#Airflow---Architecture">&#182;</a></h1><p><img src="https://image.slidesharecdn.com/june101115amairbnbbeaucheminv2-150701231554-lva1-app6892/95/airflow-an-open-source-platform-to-author-and-monitor-data-pipelines-23-638.jpg" alt="Airflow-Architecture"></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Concepts-and-API">Concepts and API<a class="anchor-link" href="#Concepts-and-API">&#182;</a></h1><p><img src="img/dag-example.png" alt=""></p>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><p><img src="img/dag-example-0.png" alt=""></p>
 
 </div>
 </div>
@@ -12180,8 +12241,9 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Workflow-Building-Blocks---DAG">Workflow Building Blocks - DAG<a class="anchor-link" href="#Workflow-Building-Blocks---DAG">&#182;</a></h2><ul>
-<li>DAG: Directed Acyclic Graph</li>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Workflow-Building-Blocks---DAG">Workflow Building Blocks - DAG<a class="anchor-link" href="#Workflow-Building-Blocks---DAG">&#182;</a></h3><ul>
+<li>Building a workflow -- a set of tasks with a dependency structure -- is the main goal.</li>
+<li>Workflows are modeled as DAGs: Directed Acyclic Graphs.</li>
 </ul>
 
 </div>
@@ -12197,25 +12259,13 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 
 <span class="n">default_args</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;owner&#39;</span><span class="p">:</span> <span class="s1">&#39;daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;daniel.moreno@mercadoni.com&#39;</span><span class="p">],</span>
                 <span class="s1">&#39;start_date&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;depends_on_past&#39;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                <span class="s1">&#39;retries&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;retry_delay&#39;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span> <span class="o">=</span> <span class="mi">30</span><span class="p">),</span>
-                <span class="c1"># &#39;pool&#39; : &#39;main&#39;,</span>
-                <span class="c1"># &#39;sla&#39; : timedelta(minutes = 30),</span>
-                <span class="c1"># &#39;execution_timeout&#39; : timedelta(minutes = 5),</span>
-                <span class="c1"># &#39;on_failure_callback&#39; : failure_function,</span>
-                <span class="c1"># &#39;on_success_callback&#39;: success_function,</span>
-                <span class="c1"># &#39;on_retry_callback&#39;: retry_function,</span>
-                <span class="c1"># &#39;trigger_rule&#39;: &#39;all_success&#39;</span>
-               <span class="p">}</span>
+                <span class="s1">&#39;retries&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;retry_delay&#39;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)}</span>
 
 <span class="n">dag</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span><span class="n">dag_id</span>            <span class="o">=</span> <span class="s1">&#39;model&#39;</span><span class="p">,</span>
           <span class="n">schedule_interval</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span> <span class="o">=</span> <span class="mi">10</span><span class="p">),</span> <span class="c1"># &#39;0/10 * * * *&#39;</span>
           <span class="n">default_args</span>      <span class="o">=</span> <span class="n">default_args</span><span class="p">,</span>
           <span class="n">dagrun_timeout</span>    <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
-          <span class="c1"># template_searchpath = [&#39;path/to/queries&#39;],</span>
-          <span class="c1"># concurrency = 4,</span>
-          <span class="c1"># max_active_runs = 1,</span>
-          <span class="c1"># sla_miss_callback = sla_alert_function</span>
-          <span class="p">)</span>
+          <span class="n">template_searchpath</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;path/to/queries&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12226,8 +12276,10 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Workflow-Building-Blocks---Operators-and-Tasks">Workflow Building Blocks - Operators and Tasks<a class="anchor-link" href="#Workflow-Building-Blocks---Operators-and-Tasks">&#182;</a></h2><ul>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Workflow-Building-Blocks---Operators-and-Tasks">Workflow Building Blocks - Operators and Tasks<a class="anchor-link" href="#Workflow-Building-Blocks---Operators-and-Tasks">&#182;</a></h3><ul>
 <li>Operators ⟶ Tasks ⟶ Task instances</li>
+<li>Operators are Task "factories"</li>
+<li>When a Taks is executed a Task instance is produced</li>
 </ul>
 
 </div>
@@ -12251,10 +12303,8 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 
 <span class="n">py_task</span> <span class="o">=</span> <span class="n">PythonOperator</span><span class="p">(</span><span class="n">task_id</span> <span class="o">=</span> <span class="s1">&#39;py_task&#39;</span><span class="p">,</span>
                          <span class="n">python_callable</span> <span class="o">=</span> <span class="n">py_function</span><span class="p">,</span>
-                         <span class="n">dag</span> <span class="o">=</span> <span class="n">dag</span><span class="p">,</span>
                          <span class="n">op_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;arg&#39;</span> <span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">},</span>
-                         <span class="c1"># ... other ways to pass arguments</span>
-                         <span class="p">)</span>
+                         <span class="n">dag</span> <span class="o">=</span> <span class="n">dag</span><span class="p">)</span>
 
 <span class="n">mysql_task</span><span class="o">.</span><span class="n">set_upstream</span><span class="p">(</span><span class="n">bash_task</span><span class="p">)</span>
 
@@ -12269,17 +12319,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Workflow-Building-Blocks">Workflow Building Blocks<a class="anchor-link" href="#Workflow-Building-Blocks">&#182;</a></h2><p><img src="img/dag-example-0.png" alt=""></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Workflow-Building-Blocks---Operators">Workflow Building Blocks - Operators<a class="anchor-link" href="#Workflow-Building-Blocks---Operators">&#182;</a></h2>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Workflow-Building-Blocks---Operators">Workflow Building Blocks - Operators<a class="anchor-link" href="#Workflow-Building-Blocks---Operators">&#182;</a></h3>
 </div>
 </div>
 </div><div class="fragment">
@@ -12321,7 +12361,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Workflow-Building-Blocks---Operators">Workflow Building Blocks - Operators<a class="anchor-link" href="#Workflow-Building-Blocks---Operators">&#182;</a></h2>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Workflow-Building-Blocks---Operators">Workflow Building Blocks - Operators<a class="anchor-link" href="#Workflow-Building-Blocks---Operators">&#182;</a></h3>
 </div>
 </div>
 </div><div class="fragment">
@@ -12353,7 +12393,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </li>
 <li><p>Other (contributed):</p>
 <ul>
-<li>Ssh, GoogleCloudStorage, Spark SQL, Sqoop, Vertica, AWS EMR, Hipchat</li>
+<li>Ssh, GCS, Spark SQL, Sqoop, Vertica, AWS EMR, Hipchat</li>
 </ul>
 </li>
 </ul>
@@ -12366,7 +12406,17 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Key-Elements">Key Elements<a class="anchor-link" href="#Key-Elements">&#182;</a></h2><ul>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="A-real-life-DAG">A real-life DAG<a class="anchor-link" href="#A-real-life-DAG">&#182;</a></h3><p><img src="img/dag-example.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Key-Elements">Key Elements<a class="anchor-link" href="#Key-Elements">&#182;</a></h3><ul>
 <li><p>Hooks: the building blocks of operators</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">airflow.hooks</span> <span class="kn">import</span> <span class="n">MySqlHook</span>
 
@@ -12384,7 +12434,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Key-Elements">Key Elements<a class="anchor-link" href="#Key-Elements">&#182;</a></h2><ul>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Key-Elements">Key Elements<a class="anchor-link" href="#Key-Elements">&#182;</a></h3><ul>
 <li>Connections</li>
 </ul>
 <p><img src="img/connection.gif" alt="connections-ui"></p>
@@ -12397,7 +12447,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Further-Elements">Further Elements<a class="anchor-link" href="#Further-Elements">&#182;</a></h2>
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Further-Elements">Further Elements<a class="anchor-link" href="#Further-Elements">&#182;</a></h3>
 </div>
 </div>
 </div><div class="fragment">
@@ -12419,7 +12469,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Templates (Jinja) ⟶ Patterns and/or Parametrization</li>
+<li>Templates (Jinja) and Macros ⟶ Patterns and/or Parametrization</li>
 </ul>
 
 </div>
@@ -12478,7 +12528,19 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Web-UI">Web UI<a class="anchor-link" href="#Web-UI">&#182;</a></h1><p><img src="http://airflow.incubator.apache.org/_images/airflow.gif" alt=""></p>
+<h1 id="Airflow---Scheduler">Airflow - Scheduler<a class="anchor-link" href="#Airflow---Scheduler">&#182;</a></h1><p><img src="https://www.tangentehr.com/final/wp-content/uploads/2015/03/Enterprise-Schedular-2-512x512.png" alt="scheduler" style="width: 100px;"/></p>
+
+<pre><code>    airflow scheduler -n $NUM
+
+</code></pre>
+<ul>
+<li><p>Monitors and triggers the DAGs creating <code>DAG Runs</code> and starting the executor</p>
+</li>
+<li><p>First <code>DAG Run</code> from DAG's <code>start_date</code></p>
+</li>
+<li><p>Subsequent runs based on <code>schedule_interval</code> (cron expression or <code>datetime.timedelta</code>)</p>
+</li>
+</ul>
 
 </div>
 </div>
@@ -12488,13 +12550,60 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CLI-and-Deployment">CLI and Deployment<a class="anchor-link" href="#CLI-and-Deployment">&#182;</a></h1><ul>
-<li>Setup a DB (SQLALchemy) for the backend (executor)</li>
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><p><img src="http://airflow.incubator.apache.org/_images/airflow.gif" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---CLI">Airflow - CLI<a class="anchor-link" href="#Airflow---CLI">&#182;</a></h1><p><img src="http://cdn.osxdaily.com/wp-content/uploads/2014/07/iterm2-icon.jpg" alt="cli" style="width: 80px;"/></p>
+<p>Rich set of commands for dev-ops: <code>airflow [-h] &lt;command&gt;</code></p>
+<p><strong>Core services</strong></p>
+
+<pre><code>    webserver -p 80
+    scheduler -n $NUM
+</code></pre>
+<p><strong>Meta-DB operations</strong></p>
+
+<pre><code>   initdb resetdb upgradedb
+</code></pre>
+<p><strong>Operate on DAGs</strong></p>
+
+<pre><code>   pause unpause run trigger_dag backfill dag_state task_state clear
+
+</code></pre>
+<p><strong>Development and test</strong></p>
+
+<pre><code>   list_dags list_tasks variables render test</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Deployment">Airflow - Deployment<a class="anchor-link" href="#Airflow---Deployment">&#182;</a></h1><h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Setup a meta-DB (SQLALchemy powered) for the backend (executor)</li>
 </ul>
 
 </div>
 </div>
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12519,25 +12628,9 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>Initialiaze the DB</p>
+<li><p>Initialiaze the DB (once)</p>
 
 <pre><code>  airflow initdb</code></pre>
-</li>
-</ul>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Ready to initialize the services:</p>
-
-<pre><code>  airflow webserver -p 80
-  airflow scheduler -n $NUM</code></pre>
 </li>
 </ul>
 
@@ -12549,14 +12642,9 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Run-as-a-service">Run as a service<a class="anchor-link" href="#Run-as-a-service">&#182;</a></h2><ul>
-<li><p>Setup Airflow (Web UI and Scheduler) as services with systemd or upstart (launchd in OSX):</p>
-<ul>
-<li><a href="https://github.com/apache/incubator-airflow/tree/master/scripts/systemd"><code>scripts/systemd</code></a></li>
-<li><a href="https://github.com/apache/incubator-airflow/tree/master/scripts/upstart"><code>scripts/upstart</code></a>    </li>
-</ul>
-</li>
-</ul>
+<h1 id="Airflow---Deployment">Airflow - Deployment<a class="anchor-link" href="#Airflow---Deployment">&#182;</a></h1><h3 id="Initialize">Initialize<a class="anchor-link" href="#Initialize">&#182;</a></h3>
+<pre><code>    airflow webserver -p 80
+    airflow scheduler -n $NUM</code></pre>
 
 </div>
 </div>
@@ -12566,9 +12654,18 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Run-as-a-service">Run as a service<a class="anchor-link" href="#Run-as-a-service">&#182;</a></h3><ul>
+<li><p>Setup Airflow (Web UI and Scheduler) as services with systemd or upstart (launchd in OSX):</p>
+<ul>
+<li><a href="https://github.com/apache/incubator-airflow/tree/master/scripts/systemd"><code>scripts/systemd</code></a></li>
+<li><p><a href="https://github.com/apache/incubator-airflow/tree/master/scripts/upstart"><code>scripts/upstart</code></a></p>
 
-<pre><code>        initctl start airflow-webserver
-        initctl start airflow-scheduler</code></pre>
+<pre><code>   initctl start airflow-webserver
+   initctl start airflow-scheduler</code></pre>
+</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -12589,7 +12686,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 <li>Common pitfalls: <a href="https://cwiki.apache.org/confluence/display/AIRFLOW/Common+Pitfalls">https://cwiki.apache.org/confluence/display/AIRFLOW/Common+Pitfalls</a></li>
 </ul>
 </li>
-<li><p><a href="http://www.slideshare.net/Hadoop_Summit/airflow-an-open-source-platform-to-author-and-monitor-data-pipelines?next_slideshow=5">Maxime Beauchemin's original presentation</a></p>
+<li><p><a href="http://www.slideshare.net/Hadoop_Summit/airflow-an-open-source-platform-to-author-and-monitor-data-pipelines">Maxime Beauchemin's original presentation</a></p>
 </li>
 <li><p>ETL With Airflow (deep example) <a href="https://github.com/gtoonstra/etl-with-airflow">https://github.com/gtoonstra/etl-with-airflow</a></p>
 </li>
@@ -12603,7 +12700,7 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Colophon">Colophon<a class="anchor-link" href="#Colophon">&#182;</a></h1><h4 id="demorenoc.github.io/slides/pycon-co-2017/airflow"><a href="https://demorenoc.github.io/slides/pycon-co-2017/airflow"><strong>demorenoc.github.io/slides/pycon-co-2017/airflow</strong></a><a class="anchor-link" href="#demorenoc.github.io/slides/pycon-co-2017/airflow">&#182;</a></h4><p>This presentation was written in a <a href="https://jupyter.org">Jupyter Notebook</a> and compiled into a <a href="http://lab.hakim.se/reveal-js">reveal.js</a> presentation by <a href="https://nbconvert.readthedocs.io/en/latest/"><code>nbconvert</code></a> in the default slides template and powered by <a href="https://cdnjs.com/">CDNJS</a>. Published online in <a href="https://github.com/demorenoc/slides">GitHub</a> thanks to <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+<h1 id="Colophon">Colophon<a class="anchor-link" href="#Colophon">&#182;</a></h1><h4 id="demorenoc.github.io/slides/pycon-co-2017/airflow"><a href="https://demorenoc.github.io/slides/pycon-co-2017/airflow"><strong>demorenoc.github.io/slides/pycon-co-2017/airflow</strong></a><a class="anchor-link" href="#demorenoc.github.io/slides/pycon-co-2017/airflow">&#182;</a></h4><p>This presentation was written in a <a href="https://jupyter.org">Jupyter Notebook</a> (available <a href="https://github.com/demorenoc/slides/blob/gh-pages/pycon-co-2017/airflow/moving-tranforming-data-airflow.ipynb">here</a>) and compiled into a <a href="http://lab.hakim.se/reveal-js">reveal.js</a> presentation by <a href="https://nbconvert.readthedocs.io/en/latest/"><code>nbconvert</code></a> in the default slides template and powered by <a href="https://cdnjs.com/">CDNJS</a>. Published online in <a href="https://github.com/demorenoc/slides">GitHub</a> thanks to <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 <p>This presentation was prepared by <a href="https://github.com/demorenoc">Daniel Moreno</a> for a talk given in <a href="http://www.pycon.co/">PyCon.co</a> and it's original content (not much really) is under the <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license.</p>
 <p><a href="http://creativecommons.org/licenses/by/4.0/" title="WEB"><img src="http://i.creativecommons.org/l/by/4.0/88x31.png" alt="CC BY"></a></p>
 
