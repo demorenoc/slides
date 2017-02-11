@@ -11874,9 +11874,7 @@ I am Daniel.</p>
 <h1 id="Outline">Outline<a class="anchor-link" href="#Outline">&#182;</a></h1><ul>
 <li><p>Motivation</p>
 </li>
-<li><p>Whishlist</p>
-</li>
-<li><p>Airflow</p>
+<li><p>Airflow - Overview</p>
 </li>
 <li><p>Airflow - Components</p>
 <ul>
@@ -11901,9 +11899,10 @@ I am Daniel.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><ul>
-<li>Modern companies operate on complex and diverse processes powered by technology and producing diverse and vast amounts of data</li>
+<li><p>Modern companies operate on complex and diverse processes powered by technology and producing diverse and vast amounts of data</p>
+<p><img src="http://www.intorobotics.com/wp-content/uploads/2014/10/HRInternetofThingsStandardsiStockphoto27050372-1393867723706.jpg" alt="processes" style="width: 550px;" /></p>
+</li>
 </ul>
-<p><img src="http://www.intorobotics.com/wp-content/uploads/2014/10/HRInternetofThingsStandardsiStockphoto27050372-1393867723706.jpg" alt=""></p>
 
 </div>
 </div>
@@ -11934,10 +11933,11 @@ I am Daniel.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><ul>
 <li><strong>Moving and transforming data</strong> can get costly, specially when needed continously:<ul>
+<li>Cleaning takes around 80% of the time in data analysis</li>
 <li>Overlooked process in early stages</li>
 <li>Large diversity of tools producing complex and specialized "stacks"</li>
-<li>Cleaning takes around 80% of the time in data analysis</li>
 <li>Task repetition and redundancy</li>
+<li>Hidden complexities and needs</li>
 </ul>
 </li>
 </ul>
@@ -11946,25 +11946,6 @@ I am Daniel.</p>
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><h2 id="How-does-your-company-manage-their-data-workflows?">How does your company manage their data <em>workflows</em>?<a class="anchor-link" href="#How-does-your-company-manage-their-data-workflows?">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="img/mercadoni-etl.png" alt=""></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12091,16 +12072,35 @@ I am Daniel.</p>
 
 </div>
 </div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h1><h2 id="How-does-your-company-manage-their-data-workflows?">How does your company manage their data <em>workflows</em>?<a class="anchor-link" href="#How-does-your-company-manage-their-data-workflows?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/mercadoni-etl.png" alt=""></p>
+
+</div>
+</div>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Airflow">Airflow<a class="anchor-link" href="#Airflow">&#182;</a></h1><p><br/></p>
+<h1 id="Airflow---Overview">Airflow - Overview<a class="anchor-link" href="#Airflow---Overview">&#182;</a></h1><p><br/></p>
 <p><img src="https://raw.githubusercontent.com/apache/incubator-airflow/master/airflow/www/static/pin_100.png" alt="Airflow"></p>
 <p><img src="http://incubator.apache.org/images/egg-logo2.png" alt="Incubator"></p>
-<p>Originally by <a href="https://github.com/mistercrunch">Maxime Beauchemin @mistercrunch</a> from Airbnb.
+<p>Originally by <a href="https://github.com/mistercrunch">Maxime Beauchemin @mistercrunch</a> from Airbnb. Now used by more than 70 companies.
 <br/></p>
 <p><a href="https://github.com/apache/incubator-airflow">https://github.com/apache/incubator-airflow</a></p>
 <p><a href="https://airflow.incubator.apache.org/">https://airflow.incubator.apache.org/</a></p>
@@ -12119,23 +12119,18 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Alternatives">Alternatives<a class="anchor-link" href="#Alternatives">&#182;</a></h1><ul>
-<li><p>Luigi by Spotify <img src="https://raw.githubusercontent.com/spotify/luigi/master/doc/luigi.png" alt="Luigi" style="width: 150px;"/></p>
-</li>
-<li><p>Pinball by Pinterest</p>
-</li>
-<li><p>See a some comparisons:</p>
-<ul>
+<h1 id="Airflow---Overview">Airflow - Overview<a class="anchor-link" href="#Airflow---Overview">&#182;</a></h1><h2 id="Alternatives">Alternatives<a class="anchor-link" href="#Alternatives">&#182;</a></h2><ul>
+<li>Luigi by Spotify <img src="https://raw.githubusercontent.com/spotify/luigi/master/doc/luigi.png" alt="Luigi" style="width: 150px;"/></li>
+<li>Pinball by Pinterest</li>
+<li>See some comparisons:<ul>
 <li><a href="http://bytepawn.com/luigi-airflow-pinball.html#luigi-airflow-pinball">Luigi vs Airflow vs Pinball</a></li>
 <li><a href="http://www.slideshare.net/sumitmaheshwari007/apache-airflow">Apache Airflow - Presentation by Sumit Maheshwari (Quoble)</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="For-Hadoop">For Hadoop<a class="anchor-link" href="#For-Hadoop">&#182;</a></h2><ul>
-<li><p>Azkaban by LinkedIn</p>
-</li>
-<li><p>Apache Oozie (originally by Yahoo!) <img src="http://oozie.apache.org/images/oozie_200x.png" alt=""></p>
-</li>
+<h3 id="For-Hadoop">For Hadoop<a class="anchor-link" href="#For-Hadoop">&#182;</a></h3><ul>
+<li>Azkaban by LinkedIn</li>
+<li>Apache Oozie (originally by Yahoo!) <img src="http://oozie.apache.org/images/oozie_200x.png" alt=""></li>
 </ul>
 
 </div>
@@ -12242,8 +12237,10 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Workflow-Building-Blocks---DAG">Workflow Building Blocks - DAG<a class="anchor-link" href="#Workflow-Building-Blocks---DAG">&#182;</a></h3><ul>
-<li>Building a workflow -- a set of tasks with a dependency structure -- is the main goal.</li>
-<li>Workflows are modeled as DAGs: Directed Acyclic Graphs.</li>
+<li><p>Building a workflow — a set of tasks with a dependency structure — is the main goal.</p>
+</li>
+<li><p>Workflows are modeled as DAGs: Directed Acyclic Graphs.</p>
+</li>
 </ul>
 
 </div>
@@ -12437,7 +12434,20 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 <h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Key-Elements">Key Elements<a class="anchor-link" href="#Key-Elements">&#182;</a></h3><ul>
 <li>Connections</li>
 </ul>
-<p><img src="img/connection.gif" alt="connections-ui"></p>
+<p><img src="img/connection-0.png" alt="connections-ui"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---API-and-Concepts">Airflow - API and Concepts<a class="anchor-link" href="#Airflow---API-and-Concepts">&#182;</a></h1><h3 id="Key-Elements">Key Elements<a class="anchor-link" href="#Key-Elements">&#182;</a></h3><ul>
+<li>Connections</li>
+</ul>
+<p><img src="img/connection-1.png" alt="connections-ui"></p>
 
 </div>
 </div>
@@ -12550,7 +12560,78 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><p><img src="http://airflow.incubator.apache.org/_images/airflow.gif" alt=""></p>
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><p><img src="img/ui-dags.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><h2 id="DAGs---Graph-View">DAGs - Graph View<a class="anchor-link" href="#DAGs---Graph-View">&#182;</a></h2><p><img src="img/ui-dag-1.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><h2 id="DAGs---Tasks-sub-menu">DAGs - Tasks sub-menu<a class="anchor-link" href="#DAGs---Tasks-sub-menu">&#182;</a></h2><p><img src="img/ui-dag-2.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><h2 id="DAGs---Tree-View">DAGs - Tree View<a class="anchor-link" href="#DAGs---Tree-View">&#182;</a></h2><p><img src="img/ui-dag-3.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><h2 id="DAGs---Task-Duration">DAGs - Task Duration<a class="anchor-link" href="#DAGs---Task-Duration">&#182;</a></h2><p><img src="img/ui-dag-4.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><h2 id="DAGs---Gantt">DAGs - Gantt<a class="anchor-link" href="#DAGs---Gantt">&#182;</a></h2><p><img src="img/ui-dag-5.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><h2 id="Other-Menus">Other Menus<a class="anchor-link" href="#Other-Menus">&#182;</a></h2><p><img src="img/ui-menu-profiling.png" alt="">
+<img src="img/ui-menu-browse.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Airflow---Web-UI">Airflow - Web UI<a class="anchor-link" href="#Airflow---Web-UI">&#182;</a></h1><h2 id="Other-Menus">Other Menus<a class="anchor-link" href="#Other-Menus">&#182;</a></h2><p><img src="img/ui-menu-admin.png" alt=""></p>
 
 </div>
 </div>
@@ -12642,9 +12723,10 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Airflow---Deployment">Airflow - Deployment<a class="anchor-link" href="#Airflow---Deployment">&#182;</a></h1><h3 id="Initialize">Initialize<a class="anchor-link" href="#Initialize">&#182;</a></h3>
-<pre><code>    airflow webserver -p 80
-    airflow scheduler -n $NUM</code></pre>
+<h1 id="Airflow---Deployment">Airflow - Deployment<a class="anchor-link" href="#Airflow---Deployment">&#182;</a></h1><p><strong>Initialize</strong></p>
+
+<pre><code>  airflow webserver -p 80
+  airflow scheduler -n $NUM</code></pre>
 
 </div>
 </div>
@@ -12654,18 +12736,16 @@ pip install <span class="s2">&quot;airflow[crypto, password]&quot;</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Run-as-a-service">Run as a service<a class="anchor-link" href="#Run-as-a-service">&#182;</a></h3><ul>
-<li><p>Setup Airflow (Web UI and Scheduler) as services with systemd or upstart (launchd in OSX):</p>
+<p><strong>Run as a service</strong></p>
+<p>Setup Airflow (Web UI and Scheduler) as services with systemd or upstart (launchd in OSX):</p>
 <ul>
 <li><a href="https://github.com/apache/incubator-airflow/tree/master/scripts/systemd"><code>scripts/systemd</code></a></li>
-<li><p><a href="https://github.com/apache/incubator-airflow/tree/master/scripts/upstart"><code>scripts/upstart</code></a></p>
+<li><a href="https://github.com/apache/incubator-airflow/tree/master/scripts/upstart"><code>scripts/upstart</code></a>    </li>
+</ul>
+<p><br></p>
 
-<pre><code>   initctl start airflow-webserver
-   initctl start airflow-scheduler</code></pre>
-</li>
-</ul>
-</li>
-</ul>
+<pre><code>  initctl start airflow-webserver
+  initctl start airflow-scheduler</code></pre>
 
 </div>
 </div>
@@ -12730,7 +12810,7 @@ require(
             controls: true,
             progress: true,
             history: true,
-
+            slideNumber: "c",
             theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
             transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
